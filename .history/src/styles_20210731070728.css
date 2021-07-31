@@ -310,6 +310,7 @@ button.linkPrimary {
 
   #my-name {
     font-family: Arial, Helvetica, sans-serif;
+    background: url(media/zf.jpg) no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-position: center;
