@@ -494,9 +494,7 @@ export default function App() {
                 <span>
                   <i className="fas fa-map-marker-alt"></i>
                 </span>
-                <span style={{
-                    wordBreak: "break-all"
-                  }}>Hyderabad, India</span>
+                <span>Hyderabad, India</span>
               </div>
               <div id="my-info">
                 <span>
@@ -514,9 +512,7 @@ export default function App() {
                 <span>
                   <i className="fab fa-discord"></i>
                 </span>
-                <span style={{
-                    wordBreak: "break-all"
-                  }}>irfan_nawaz#xyz</span>
+                <span>irfan_nawaz#xyz</span>
               </div>
               <div className="text-center">
                 <a href="#body-header">

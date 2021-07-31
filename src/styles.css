@@ -230,6 +230,7 @@ td {
 }
 
 .contact-content {
+  margin: auto;
   height: inherit;
   /* height: 100px; */
   /* border: 2px solid black; */
@@ -237,7 +238,7 @@ td {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  /* padding-bottom: 40px; */
+  padding-bottom: 40px;
   flex-direction: row;
 }
 
