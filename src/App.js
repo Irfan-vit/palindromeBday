@@ -9,6 +9,7 @@ import zebra from "./50933.jpg";
 import zebra2 from "./Leopard_skin_texture.jpg";
 import zebra3 from "./purple.jpg";
 import zebra4 from "./216.jpg";
+import error from "./error.gif";
 
 const happyImgDiv = (
   <img alt="happyImage" src={happy} width="200px" height="200px" />
@@ -18,6 +19,9 @@ const sadImgImgDiv = (
 );
 const workImgImgDiv = (
   <img alt="happyImage" src={shake} width="200px" height="200px" />
+);
+const errorImgDiv = (
+  <img alt="happyImage" src={error} width="200px" height="200px" />
 );
 const shakeImgDiv = (
   <img alt="happyImage" src={work} width="200px" height="200px" />
@@ -258,10 +262,9 @@ export default function App() {
         : `${birthYear}${birthMonth}${birthDt2}`;
     }
   }
-  function clickHandler() {
-    if (date === undefined) {
-      alert("enter date");
-    } else if (date !== undefined) {
+
+    function clickHandler() {
+    try {
       tempo();
       chkPalindrome(["checking", shakeImgDiv]);
       setTimeout(() => {
@@ -288,6 +291,8 @@ export default function App() {
           }
         }
       }, 3600);
+    } catch (err) {
+      chkPalindrome(["Please Enter Correctly", errorImgDiv]);
     }
   }
   function tempo() {
