@@ -270,19 +270,25 @@ export default function App() {
       setTimeout(() => {
         for (var a = 0; a < 40; a++) {
           formattedDate[a] = formatter(date, a + 1);
+          console.log(formattedDate[a]);
           if (
             formattedDate[a] === formattedDate[a].split("").reverse().join("")
           ) {
-            formattedDate[a] = formatter(date, a + 1, true);
-            console.log(formattedDate[a]);
-            palindrome =
-              "Hurray !!!  It is A Palindrome The Date And Format Are : " +
-              formattedDate[a] +
-              " ( " +
-              types[a] +
-              " ) ";
-            chkPalindrome([palindrome, happyImgDiv]);
-            return;
+            if (isNaN(formattedDate[a])) {
+              chkPalindrome(["Please Enter Correctly", errorImgDiv]);
+              break;
+            } else {
+              formattedDate[a] = formatter(date, a + 1, true);
+              // console.log(formattedDate[a]);
+              palindrome =
+                "Hurray !!!  It is A Palindrome The Date And Format Are : " +
+                formattedDate[a] +
+                " ( " +
+                types[a] +
+                " ) ";
+              chkPalindrome([palindrome, happyImgDiv]);
+              return;
+            }
           } else if (
             a === 39 &&
             formattedDate[a] !== formattedDate[a].split("").reverse().join("")
@@ -301,6 +307,7 @@ export default function App() {
       console.log(formattedDate[a] + types[a]);
     }
   }
+
 
   function getPalindromeDates(date) {
     var givenYear = date.getFullYear() - 2;
