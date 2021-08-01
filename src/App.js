@@ -262,8 +262,7 @@ export default function App() {
         : `${birthYear}${birthMonth}${birthDt2}`;
     }
   }
-
-    function clickHandler() {
+  function clickHandler() {
     try {
       tempo();
       chkPalindrome(["checking", shakeImgDiv]);
@@ -307,7 +306,6 @@ export default function App() {
       console.log(formattedDate[a] + types[a]);
     }
   }
-
 
   function getPalindromeDates(date) {
     var givenYear = date.getFullYear() - 2;
